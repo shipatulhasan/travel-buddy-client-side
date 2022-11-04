@@ -1,0 +1,103 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+  .swiper-container{
+      width: 100%;
+  }
+  .swiper-wrapper{
+      margin-bottom:40px ;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    background: black;
+    background-blend-mode: overlay;
+    height: 350px;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .swiper-slide-active{
+    border:2px solid whitesmoke;
+    cursor: pointer;
+  }
+  .swiper-slide::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  
+    background: rgba(0, 0, 0, 0.336);
+    background-blend-mode: multiply;
+    border-radius: 10px;
+      
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: 10px; */
+    
+    
+    
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 90%;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: white!important;
+    border-radius:50% ;
+    border: 2px solid purple;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: 10px;
+    /* padding: 20px; */
+}
+.swiper-button-next{
+    right: 0;
+    left: 90px;
+}
+  
+/* break points */
+@media (max-width: 767.5px){
+    .swiper-slide{
+        height: 250px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992.9px) { 
+
+    .swiper-slide{
+        height: 300px;
+    }
+}
